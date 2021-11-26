@@ -1,0 +1,217 @@
+/* default elements */
+:root {
+  --purple: #7b08d0;
+  --offBlack: #020202;
+  --white: #ffffff;
+  --creamWhite: #beb3b3;
+  --darkBlue: #242734;
+  --luminousGreen: #00d886;
+  --grey: #707070;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--offBlack);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h1::after {
+  content: "";
+  background: var(--purple);
+  display: block;
+  position: relative;
+  left: 15rem;
+  bottom: 0.5rem;
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+.sectionHeader::after {
+  content: "";
+  background: var(--purple);
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  left: 5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background: var(--white);
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+nav ul li {
+  margin: 0 1rem 0 0;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--offBlack);
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  border-radius: 20px;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--purple);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+p,
+span form {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* classes */
+/* SplashPage */
+.splashImage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.splashImage::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background: var(--luminousGreen);
+}
+
+.darkMode {
+  margin: 0.8rem 1rem 0 0;
+}
+
+.subHeading,
+.socialIcons {
+  left: 1rem;
+}
+.subHeading {
+  position: relative;
+  bottom: 8rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.socialIcons {
+  position: relative;
+  bottom: 9rem;
+  margin: 0 0.5rem 0 0;
+}
+.socialIcons i {
+  text-decoration: none;
+  color: var(--offBlack);
+  font-size: 1.5rem;
+}
+
+.socialIcons i:hover {
+  color: var(--purple);
+}
+
+/* about me section */
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutMeContent {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.abilities {
+  width: 21.875rem;
+}
+
+.abilities span {
+  border: 1px solid var(--grey);
+  padding: 5px;
+}
+
+.skills {
+  display: flex;
+  width: 16rem;
+  flex-wrap: wrap;
+}
+
+.skills span {
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+.personalInfo {
+  width: 30%;
+  position: relative;
+  top: 2.5rem;
+}
+
+/* projects */
+
+/* .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* classes targeted by JS */
+
+/*  media queries */
