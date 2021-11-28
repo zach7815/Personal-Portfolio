@@ -37,7 +37,7 @@
 
 <body>
     <section id="aboutMe" class="aboutMe">
-        <h2 class="sectionHeader" >About Me</h2>
+        <h2 class="aboutMeHeader sectionHeader" >About Me</h2>
         <div class="aboutMeContent" >
         <div class="abilities">
             <h3>technologies</h3>
@@ -77,42 +77,48 @@
     </section>
 
     <section  id="projects" class="projects">
-        <h2 class="sectionHeader" >projects</h2>
-        <aside>
-            <h3>project 1</h3>
-            <img src="https://via.placeholder.com/400" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
+        <h2 class="projectsHeader sectionHeader" >projects</h2>
+        <div class="projectsContainer">
+        <aside class="card">
+            <h3 class="cardTitle">project 1</h3>
+            <img  class="cardImage" src="https://via.placeholder.com/400" alt="">
+            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
-        <aside>
-            <h3>project 2</h3>
-            <img src="https://via.placeholder.com/400" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
+        <aside class="card">
+            <h3 class="cardTitle" >project 2</h3>
+            <img  class="cardImage" src="https://via.placeholder.com/400" alt="">
+            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
             
         </aside>
-        <aside>
-            <h3>project 3</h3>
-            <img src="https://via.placeholder.com/400" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
+        <aside class="card">
+            <h3 class="cardTitle">project 3</h3>
+            <img class="cardImage" src="https://via.placeholder.com/400" alt="">
+            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
 
-        <aside>
-            <h3>project 4</h3>
-            <img src="https://via.placeholder.com/400" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
+        <aside class="card">
+            <h3 class="cardTitle">project 4</h3>
+            <img class="cardImage" src="https://via.placeholder.com/400" alt="">
+            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
-        <aside>
-            <h3>project 5</h3>
-            <img src="https://via.placeholder.com/400" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
+        <aside class="card">
+            <h3 class="cardTitle">project 5</h3>
+            <img class="cardImage" src="https://via.placeholder.com/400" alt="">
+            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
-        <aside>
-            <h3>project 6</h3>
-            <img src="https://via.placeholder.com/400" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
+        <aside class="card">
+            <h3 class="cardTitle">project 6</h3>
+            <img class="cardImage" src="https://via.placeholder.com/400" alt="">
+            <p class="cardAbout"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
+    </div>
     </section>
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="400" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgColorLight">
+        <path d="M0 0 L50 50 L100 0 Z" fill="white" stroke="white"></path>
+      </svg>
 <section id="contactMe" class="contactMe">
-<h2  class="sectionHeader" >contact me</h2>
+<div class="contactContainer">
+    <h2  class="contactMeHeader sectionHeader" >contact me</h2>
 <form class="contactForm" action="">
     <label for="fname"> first name</label>
     <input type="text" name="fname" id="fname">
@@ -124,6 +130,7 @@
     <input type="textarea" name="message" id="message">
    <input type="submit" name="submit" value="submit">
 </form>
+</div>
 </section>
 
 <footer></footer>

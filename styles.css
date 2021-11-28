@@ -46,16 +46,6 @@ h1::after {
 h2 {
   font-size: 3rem;
 }
-.sectionHeader::after {
-  content: "";
-  background: var(--purple);
-  display: block;
-  position: relative;
-  width: 30%;
-  height: 10px;
-  border-radius: 5px;
-  left: 5rem;
-}
 
 h3 {
   font-size: 2rem;
@@ -117,6 +107,17 @@ span form {
 }
 
 /* classes */
+/* general classes */
+.sectionHeader::after {
+  content: "";
+  background: var(--purple);
+  display: block;
+  position: relative;
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+}
+
 /* SplashPage */
 .splashImage {
   height: 100vh;
@@ -174,6 +175,10 @@ span form {
   align-items: center;
 }
 
+.aboutMeHeader::after {
+  left: 4.5rem;
+}
+
 .aboutMeContent {
   display: flex;
   justify-content: space-evenly;
@@ -206,11 +211,61 @@ span form {
 
 /* projects */
 
-/* .projects {
+.projectsHeader::after {
+  left: 3.5rem;
+  top: 0.5rem;
+}
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+}
+
+/* contactMe */
+
+.svgColorLight {
+  position: absolute;
+}
+.contactMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
+  background: #beb3b3;
+}
+
+.contactMeHeader::after {
+  left: 5.5rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactForm input {
+  width: 50%;
+}
+
+.contactForm :nth-child(8) {
+  min-height: 150px;
+}
 
 /* classes targeted by JS */
 
