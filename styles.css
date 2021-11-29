@@ -58,6 +58,7 @@ nav {
   width: 100%;
   background: var(--white);
   z-index: 1;
+  top: -1rem;
 }
 
 nav ul {
@@ -104,6 +105,12 @@ nav ul li {
 p,
 span form {
   font-family: "Montserrat", sans-serif;
+}
+
+span {
+  background-color: var(--white);
+  color: var(--offBlack);
+  text-transform: capitalize;
 }
 
 /* classes */
@@ -248,6 +255,11 @@ span form {
   background: #beb3b3;
 }
 
+.contactContainer {
+  position: relative;
+  top: 6rem;
+}
+
 .contactMeHeader::after {
   left: 5.5rem;
 }
@@ -256,17 +268,79 @@ span form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-transform: capitalize;
 }
 
-.contactForm input {
-  width: 50%;
+.contactForm label {
+  align-self: flex-start;
+}
+
+.contactForm label {
+  margin: 0.5rem 0 0 0;
+}
+
+.contactForm input:not(:last-child) {
+  width: 100%;
+}
+
+.contactForm input:not(:nth-child(8)) {
+  min-height: 30px;
 }
 
 .contactForm :nth-child(8) {
   min-height: 150px;
 }
 
+.contactForm input:last-child {
+  align-self: flex-end;
+  background-color: var(--purple);
+  height: 3rem;
+  width: 6rem;
+  margin: 0.5rem 0 0 0;
+  border: none;
+  text-transform: capitalize;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 400;
+  position: relative;
+  left: 1%;
+}
+
+.contactForm input:last-child:hover {
+  border: white 2px solid;
+}
+
 /* classes targeted by JS */
+
+.darkMode {
+  color: white;
+  background-color: var(--offBlack);
+}
+.darkMode li,
+.darkMode img {
+  color: white;
+}
+
+.svgDarkMode path {
+  fill: var(--offBlack);
+  stroke: var(--offBlack);
+}
+
+.contactMeDark {
+  background-color: var(--darkBlue);
+}
+
+.contactFormDarkMode input:not(:last-child) {
+  background-color: var(--offBlack);
+  color: white;
+  border: var(--grey) 1px solid;
+}
+
+.moonIcon {
+  background: url("images/light-mode\(24x24\)@1x.svg");
+  display: block;
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}
 
 /*  media queries */
