@@ -12,9 +12,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/501f0d1e31.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
 </head>
 <header>
-    <nav class="darkMode"> 
+    <nav class=" navigation"> 
         <ul>
   <a class="hover-underline-animation" href="#home"> <li>Home</li></a>  
   <a class="hover-underline-animation"  href="#aboutMe"> <li>About Me</li></a>  
@@ -22,12 +23,13 @@
    <a  class="hover-underline-animation"  href="#contactMe"> <li>Contact Me</li></a> 
 </ul>
 
-<a class="darkMode" href=""> <img  class="moonIcon" src="/images/dark-mode---filled(24x24)@1x.svg" alt="Light/Dark Mode icon"></a>
+<img  class="moonIcon"  src="/images/dark-mode---filled(24x24)@1x.svg" alt="Dark mode icon and button"> 
+ <img  class="sunIcon" src="/images/light-mode(24x24)@1x.svg" alt="Light mode icon and button"> 
 </nav>
 </header>
 
 
-<body class="darkMode"> 
+<body> 
     <section  id="home" class="splashImage">
         <h1 class="header">Hi I'm Zach</h1>
         <h2 class="subHeading"> A Marketer</h2>
@@ -81,46 +83,33 @@
         <h2 class="projectsHeader sectionHeader" >projects</h2>
         <div class="projectsContainer">
         <aside class="card">
-            <h3 class="cardTitle">project 1</h3>
             <img  class="cardImage" src="https://via.placeholder.com/400" alt="">
-            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
         <aside class="card">
-            <h3 class="cardTitle" >project 2</h3>
             <img  class="cardImage" src="https://via.placeholder.com/400" alt="">
-            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
-            
         </aside>
         <aside class="card">
-            <h3 class="cardTitle">project 3</h3>
             <img class="cardImage" src="https://via.placeholder.com/400" alt="">
-            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
 
         <aside class="card">
-            <h3 class="cardTitle">project 4</h3>
             <img class="cardImage" src="https://via.placeholder.com/400" alt="">
-            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
         <aside class="card">
-            <h3 class="cardTitle">project 5</h3>
             <img class="cardImage" src="https://via.placeholder.com/400" alt="">
-            <p class="cardAbout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
         <aside class="card">
-            <h3 class="cardTitle">project 6</h3>
             <img class="cardImage" src="https://via.placeholder.com/400" alt="">
-            <p class="cardAbout"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem a ab ipsum? Autem natus dolores corrupti suscipit consequuntur tenetur explicabo quam voluptatem recusandae! Est quo dolor voluptatum repudiandae dicta!</p>
         </aside>
     </div>
     </section>
-    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="400" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgColorLight svgDarkMode">
-        <path d="M0 0 L50 50 L100 0 Z" fill="white" stroke="white"></path>
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="400" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgTriangle">
+        <path  d="M0 0 L50 50 L100 0 Z"></path>
       </svg>
-<section id="contactMe" class="contactMe contactMeDark">
+<section id="contactMe" class="contactMe">
 <div class="contactContainer">
     <h2  class="contactMeHeader sectionHeader" >contact me</h2>
-<form class="contactForm contactFormDarkMode" action="mailto:fpqp5bczy@relay.firefox.com">
+<form class="contactForm" action="mailto:fpqp5bczy@relay.firefox.com">
     <label for="fname"> first name</label>
     <input type="text" name="fname" id="fname">
     <label for="lName"> last name</label>
