@@ -1,24 +1,40 @@
 const moonIcon = document.querySelector(".moonIcon");
 let sunIcon = document.querySelector(".sunIcon");
 
-
+const darkModeClasses={
+navigationContainer:document.querySelector(".navigation"),
+navigationLi:document.querySelectorAll(".navigation li"),
+socialIcons:document.querySelectorAll(".lightMode"),
+body:document.querySelector("body"),
+svg:document.querySelector(".svgTriangle"),
+contactMeSection:document.querySelector(".contactMe"),
+contactForm:document.querySelector(".contactForm"),
+}
 
 moonIcon.addEventListener("click", ()=> {
 
-    let body = document.querySelector("body");
-    let svg= document.querySelector(".svgTriangle");
-    let contactMe= document.querySelector(".contactMe")
-    let contactForm= document.querySelector(".contactForm");
-    let navLi= document.querySelectorAll(".navigation, .navigation li");
     sunIcon.style.display = "block";
     moonIcon.style.display ="none";
-    body.classList.add("darkMode");
-    navLi.forEach(element=> element.classList.toggle("darkMode"));
-    svg.classList.toggle( "svgDarkMode");
-    contactMe.classList.toggle("contactMeDark")
-    contactForm.classList.toggle("contactFormDarkMode");
-
-
+    darkModeClasses.body.classList.toggle("darkMode");
+    darkModeClasses.navigationContainer.classList.toggle("darkMode");
+    darkModeClasses.navigationLi.forEach(element=> element.classList.toggle("darkModeText"));
+    darkModeClasses.socialIcons.forEach(element=> element.classList.toggle("socialIconsDark"));
+    darkModeClasses.svg.classList.toggle( "svgDarkMode");
+   darkModeClasses.contactMeSection.classList.toggle("contactMeDark");
+    darkModeClasses.contactForm.classList.toggle("contactFormDarkMode");
 }
 
 )
+
+sunIcon.addEventListener("click", ()=>{
+    sunIcon.style.display = "none";
+    moonIcon.style.display ="block";
+    darkModeClasses.body.classList.toggle("darkMode");
+    darkModeClasses.navigationContainer.classList.toggle("darkMode");
+    darkModeClasses.navigationLi.forEach(element=> element.classList.toggle("darkModeText"));
+    darkModeClasses.socialIcons.forEach(element=> element.classList.toggle("socialIconsDark"));
+    darkModeClasses.svg.classList.toggle( "svgDarkMode");
+   darkModeClasses.contactMeSection.classList.toggle("contactMeDark");
+    darkModeClasses.contactForm.classList.toggle("contactFormDarkMode");
+
+})

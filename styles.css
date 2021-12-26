@@ -18,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 2s;
 }
 
 h1,
@@ -58,6 +59,7 @@ nav {
   width: 100%;
   background: var(--white);
   z-index: 1;
+  transition: 2s;
 }
 
 nav ul {
@@ -74,12 +76,12 @@ nav ul li {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: var(--offBlack);
+  transition: 2s;
 }
 
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #0087ca;
 }
 
 .hover-underline-animation:after {
@@ -162,15 +164,20 @@ span {
 .socialIcons {
   position: relative;
   bottom: 9rem;
-  margin: 0 0.5rem 0 0;
-}
-.socialIcons i {
-  text-decoration: none;
-  color: var(--offBlack);
-  font-size: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.socialIcons i:hover {
+.socialIcons i {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.lightMode {
+  color: var(--offBlack);
+}
+
+.lightMode:hover {
   color: var(--purple);
 }
 
@@ -189,15 +196,13 @@ span {
 .aboutMeContent {
   display: flex;
   justify-content: space-evenly;
-}
-
-.abilities {
-  width: 21.875rem;
+  gap: 2rem;
 }
 
 .abilities span {
   border: 1px solid var(--grey);
   padding: 5px;
+  height: fit-content;
 }
 
 .skills {
@@ -216,6 +221,10 @@ span {
   top: 2.5rem;
 }
 
+.personalInfo img {
+  width: 100%;
+}
+
 /* projects */
 
 .projectsHeader::after {
@@ -232,13 +241,12 @@ span {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
+  width: 100%;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: min-content;
+.cardImage {
+  width: 100%;
+  height: auto;
 }
 
 /* contactMe */
@@ -247,14 +255,16 @@ span {
   position: absolute;
   fill: #ffffff;
   stroke: #ffffff;
+  transition: 2s;
 }
 .contactMe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 55rem;
   justify-content: space-evenly;
   background: #beb3b3;
+  transition: 2s;
 }
 
 .contactContainer {
@@ -283,6 +293,7 @@ span {
 
 .contactForm input:not(:last-child) {
   width: 100%;
+  transition: 2s;
 }
 
 .contactForm input:not(:nth-child(8)) {
@@ -290,7 +301,11 @@ span {
 }
 
 .contactForm :nth-child(8) {
-  min-height: 150px;
+  padding: 5px 0 150px 0;
+}
+
+::placeholder {
+  text-transform: capitalize;
 }
 
 .contactForm input:last-child {
@@ -312,11 +327,29 @@ span {
   border: white 2px solid;
 }
 
-/* classes targeted by JS */
+/*  darkmode classes targeted by JS */
 
+.darkMode,
+.socialIconsDark,
+.svgDarkMode,
+.contactMeDark,
+.contactFormDarkMode input:not(:last-child) {
+  transition: 2s;
+}
 .darkMode {
-  color: white;
   background-color: var(--offBlack);
+  color: var(--white);
+}
+.darkModeText {
+  color: var(--white);
+}
+
+.socialIconsDark {
+  color: var(--white);
+}
+
+.socialIconsDark:hover {
+  color: var(--purple);
 }
 
 .svgDarkMode {
@@ -341,8 +374,8 @@ span {
 
 .sunIcon {
   display: none;
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
-    brightness(118%) contrast(119%);
+  filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(100deg)
+    brightness(200%) contrast(119%);
   cursor: pointer;
 }
 
