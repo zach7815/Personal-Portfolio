@@ -1,6 +1,11 @@
-const moonIcon = document.querySelector(".moonIcon");
-let sunIcon = document.querySelector(".sunIcon");
 
+
+const moonIcon = document.querySelector(".moonIcon");
+const sunIcon = document.querySelector(".sunIcon");
+const burgerM=document.querySelector(".burgerM")
+const closebtn=document.querySelector(".closebtn")
+
+// DOM Elements targetted by darkmode CSS classes
 const darkModeClasses={
 navigationContainer:document.querySelector(".navigation"),
 navigationLi:document.querySelectorAll(".navigation li"),
@@ -11,6 +16,7 @@ contactMeSection:document.querySelector(".contactMe"),
 contactForm:document.querySelector(".contactForm"),
 }
 
+// /darkmode code/
 moonIcon.addEventListener("click", ()=> {
 
     sunIcon.style.display = "block";
@@ -24,7 +30,7 @@ moonIcon.addEventListener("click", ()=> {
     darkModeClasses.contactForm.classList.toggle("contactFormDarkMode");
 }
 
-)
+);
 
 sunIcon.addEventListener("click", ()=>{
     sunIcon.style.display = "none";
@@ -37,4 +43,18 @@ sunIcon.addEventListener("click", ()=>{
    darkModeClasses.contactMeSection.classList.toggle("contactMeDark");
     darkModeClasses.contactForm.classList.toggle("contactFormDarkMode");
 
+});
+
+
+// mobile menu code
+burgerM.addEventListener("click", ()=>{
+ document.querySelector(".sideBar").classList.toggle("mobileWidth")
+document.querySelector("body").classList.toggle("mobileShift")
+burgerM.classList.toggle("burgerMenuHidden");
+})
+
+closebtn.addEventListener("click", ()=>{
+   document.querySelector(".sideBar").classList.toggle("mobileWidth");
+document.querySelector("body").classList.toggle("mobileShift");
+burgerM.classList.toggle("burgerMenuHidden");
 })

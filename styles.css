@@ -30,6 +30,8 @@ h3 {
 
 h1 {
   font-size: 8rem;
+  width: 100%;
+  text-align: center;
 }
 
 h1::after {
@@ -37,11 +39,12 @@ h1::after {
   background: var(--purple);
   display: block;
   position: relative;
-  left: 15rem;
   bottom: 0.5rem;
-  width: 30%;
+  width: 25%;
+  max-width: 9rem;
   height: 10px;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -114,6 +117,28 @@ span {
   text-transform: capitalize;
 }
 
+/* mobile navigation */
+
+.burgerM {
+  cursor: pointer;
+  display: none;
+  margin: 1rem;
+}
+.line1,
+.line2,
+.line3 {
+  position: relative;
+  height: 0.2em;
+  width: 2em;
+  margin-bottom: 10px;
+  background-color: var(--offBlack);
+  border-radius: 3px;
+}
+
+.closebtn {
+  display: none;
+}
+
 /* classes */
 /* general classes */
 .sectionHeader::after {
@@ -150,16 +175,108 @@ span {
   margin: 0.8rem 1rem 0 0;
 }
 
-.subHeading,
-.socialIcons {
-  left: 1rem;
-}
 .subHeading {
   position: relative;
   bottom: 8rem;
   font-size: 2rem;
   font-weight: 400;
 }
+
+/* subheading animation */
+
+.text1 {
+  animation: text1;
+}
+
+.text2 {
+  animation: text2;
+}
+.text3 {
+  animation: text3;
+}
+.text4 {
+  animation: text4;
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-timing-function: steps(15, end);
+  animation-iteration-count: infinite;
+}
+
+.text1,
+.text2 {
+  animation-duration: 20s;
+}
+
+.text3,
+.text4 {
+  animation-duration: 15s;
+}
+
+.text1::after,
+.text2::after,
+.text3::after,
+.text4::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(15, end);
+}
+
+/* @keyframes text3 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+  10%,
+  30% {
+    width: 7em;
+  }
+}
+
+@keyframes text2 {
+  30%,
+  100% {
+    width: 0;
+  }
+  60%,
+  70% {
+    width: 5.6em;
+  }
+} */
+
+@keyframes text1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+  10% {
+    width: 5.2em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* end of animation classes */
 
 .socialIcons {
   position: relative;
@@ -380,3 +497,102 @@ span {
 }
 
 /*  media queries */
+@media screen and (max-width: 641px) {
+  h1 {
+    font-size: 4rem;
+    margin: 8rem;
+  }
+  .aboutMeContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .abilities {
+    text-align: center;
+  }
+  .skills {
+    justify-content: center;
+  }
+  .personalInfo {
+    width: 80%;
+  }
+
+  .projectsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hover-underline-animation::after {
+    left: unset;
+  }
+  .links:nth-child(2) {
+    color: #00d886;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  .burgerM {
+    display: inline-block;
+  }
+  .moonIcon,
+  .sunIcon {
+    display: none !important;
+  }
+
+  .mobileNavFixed {
+    width: 100%;
+    position: fixed;
+    background: white;
+    z-index: 10;
+  }
+
+  .sideBar {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .links a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-size: 1.8rem;
+  }
+  .links {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .links li {
+    color: white;
+  }
+  .closebtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 0.5rem;
+    font-size: 3rem;
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+    align-self: flex-end;
+  }
+
+  /* mobile menu classes */
+  .mobileWidth {
+    width: 250px;
+  }
+  .mobileShift {
+    margin-left: 250px;
+    overflow: hidden;
+  }
+  .burgerMenuHidden {
+    display: none;
+  }
+}

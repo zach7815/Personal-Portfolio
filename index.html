@@ -14,9 +14,17 @@
     <script src="https://kit.fontawesome.com/501f0d1e31.js" crossorigin="anonymous"></script>
     <script defer src="index.js"></script>
 </head>
-<header>
-    <nav class="navigation"> 
-        <ul>
+<header class="container">
+    <div class="mobileNavFixed">
+    <div class=burgerM >
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+    <nav class="navigation sideBar"> 
+        <ul class="links">
+ <a href="javascript:void(0)" class="closebtn">×</a>
   <a class="hover-underline-animation" href="#home"> <li>Home</li></a>  
   <a class="hover-underline-animation"  href="#aboutMe"> <li>About Me</li></a>  
     <a class="hover-underline-animation"  href="#projects"><li>Projects</li></a> 
@@ -28,11 +36,20 @@
 </nav>
 </header>
 
-
+<!-- Hero Page -->
 <body> 
     <section  id="home" class="splashImage">
         <h1 class="header">Hi I'm Zach</h1>
-        <h2 class="subHeading"> A Marketer</h2>
+        <h2 class="subHeading">
+            <div class="staticText">
+                I'm a 
+            </div>
+           <ul class="dynamicText">
+              <li><span>developer</span></li>
+              <li><span>marketer</span></li>
+              <li><span>Inquisitive</span></li>
+           </ul>
+        </h2>
         <div class="socialIcons">
           <a href="https://github.com/"> <i class="fab fa-github-square lightMode "></i></a>  
             <a href="https://twitter.com/mcfeegles"><i class="fab fa-twitter-square lightMode "></i></a>
