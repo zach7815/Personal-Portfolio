@@ -2,8 +2,11 @@
 
 const moonIcon = document.querySelector(".moonIcon");
 const sunIcon = document.querySelector(".sunIcon");
-const burgerM=document.querySelector(".burgerM")
-const closebtn=document.querySelector(".closebtn")
+const burgerM=document.querySelector(".burgerM");
+const closebtn=document.querySelector(".closebtn");
+const menuItems=document.querySelectorAll(".menuItem");
+
+
 
 // DOM Elements targetted by darkmode CSS classes
 const darkModeClasses={
@@ -51,10 +54,16 @@ burgerM.addEventListener("click", ()=>{
  document.querySelector(".sideBar").classList.toggle("mobileWidth")
 document.querySelector("body").classList.toggle("mobileShift")
 burgerM.classList.toggle("burgerMenuHidden");
+
+
 })
 
 closebtn.addEventListener("click", ()=>{
    document.querySelector(".sideBar").classList.toggle("mobileWidth");
 document.querySelector("body").classList.toggle("mobileShift");
 burgerM.classList.toggle("burgerMenuHidden");
+
+
 })
+
+

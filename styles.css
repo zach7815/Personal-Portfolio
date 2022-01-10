@@ -124,6 +124,10 @@ span {
   display: none;
   margin: 1rem;
 }
+
+.burgerMFixed{
+  position:fixed;
+}
 .line1,
 .line2,
 .line3 {
