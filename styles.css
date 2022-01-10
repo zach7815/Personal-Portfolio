@@ -125,8 +125,8 @@ span {
   margin: 1rem;
 }
 
-.burgerMFixed{
-  position:fixed;
+.burgerMFixed {
+  position: fixed;
 }
 .line1,
 .line2,
@@ -593,7 +593,6 @@ span {
     width: 250px;
   }
   .mobileShift {
-    margin-left: 250px;
     overflow: hidden;
   }
   .burgerMenuHidden {
