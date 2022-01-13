@@ -8,16 +8,20 @@ const menuItems=document.querySelectorAll(".menuItem");
 
 
 
-// DOM Elements targetted by darkmode CSS classes
+// DOM Elements Object targetted by darkmode CSS classes
 const darkModeClasses={
 navigationContainer:document.querySelector(".navigation"),
 navigationLi:document.querySelectorAll(".navigation li"),
+typingEffect:document.querySelector(".dynamicText"),
 socialIcons:document.querySelectorAll(".lightMode"),
 body:document.querySelector("body"),
 svg:document.querySelector(".svgTriangle"),
 contactMeSection:document.querySelector(".contactMe"),
 contactForm:document.querySelector(".contactForm"),
 }
+
+
+
 
 // /darkmode code/
 moonIcon.addEventListener("click", ()=> {
@@ -27,6 +31,7 @@ moonIcon.addEventListener("click", ()=> {
     darkModeClasses.body.classList.toggle("darkMode");
     darkModeClasses.navigationContainer.classList.toggle("darkMode");
     darkModeClasses.navigationLi.forEach(element=> element.classList.toggle("darkModeText"));
+    darkModeClasses.typingEffect.style.setProperty("--white", "#020202");
     darkModeClasses.socialIcons.forEach(element=> element.classList.toggle("socialIconsDark"));
     darkModeClasses.svg.classList.toggle( "svgDarkMode");
    darkModeClasses.contactMeSection.classList.toggle("contactMeDark");
@@ -41,6 +46,7 @@ sunIcon.addEventListener("click", ()=>{
     darkModeClasses.body.classList.toggle("darkMode");
     darkModeClasses.navigationContainer.classList.toggle("darkMode");
     darkModeClasses.navigationLi.forEach(element=> element.classList.toggle("darkModeText"));
+    darkModeClasses.typingEffect.style.setProperty("--white", "#ffffff");
     darkModeClasses.socialIcons.forEach(element=> element.classList.toggle("socialIconsDark"));
     darkModeClasses.svg.classList.toggle( "svgDarkMode");
    darkModeClasses.contactMeSection.classList.toggle("contactMeDark");

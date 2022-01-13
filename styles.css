@@ -162,6 +162,7 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .splashImage::after {
@@ -181,102 +182,70 @@ span {
 
 .subHeading {
   position: relative;
+  display: flex;
   bottom: 8rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
+  margin-left: 0.5rem;
 }
 
 /* subheading animation */
 
-.text1 {
-  animation: text1;
-}
-
-.text2 {
-  animation: text2;
-}
-.text3 {
-  animation: text3;
-}
-.text4 {
-  animation: text4;
-}
-
-.text1,
-.text2,
-.text3,
-.text4 {
+.dynamicText {
+  height: 3.8rem;
+  line-height: 4rem;
   overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
+  margin: 0.3rem;
   position: relative;
-  animation-timing-function: steps(15, end);
-  animation-iteration-count: infinite;
+  top: -5px;
+  padding-left: 0.6rem;
+}
+.dynamicText :first-child {
+  position: relative;
+  top: -0.1rem;
 }
 
-.text1,
-.text2 {
-  animation-duration: 20s;
+.dynamicText li {
+  list-style: none;
+  font-size: 3rem;
+  position: relative;
+  top: 0rem;
+  animation: slide 9s steps(3) infinite;
 }
 
-.text3,
-.text4 {
-  animation-duration: 15s;
+@keyframes slide {
+  100% {
+    top: -200px;
+  }
 }
 
-.text1::after,
-.text2::after,
-.text3::after,
-.text4::after {
-  content: "|";
+.dynamicText li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 4rem;
+  color: var(--purple);
+  background-color: transparent;
+}
+
+.dynamicText li span::after {
+  content: "";
   position: absolute;
-  right: 0;
-  animation: caret infinite;
-  animation-duration: 1s;
-  animation-timing-function: steps(15, end);
+  left: 0;
+  height: 110%;
+  width: 100%;
+  background-color: var(--white);
+  border-left: 2px solid var(--purple);
+  transition: 2s;
+  animation: typing 3s steps(10) infinite;
 }
 
-/* @keyframes text3 {
-  0%,
-  50%,
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
   100% {
-    width: 0;
-  }
-  10%,
-  30% {
-    width: 7em;
-  }
-}
-
-@keyframes text2 {
-  30%,
-  100% {
-    width: 0;
-  }
-  60%,
-  70% {
-    width: 5.6em;
-  }
-} */
-
-@keyframes text1 {
-  0%,
-  50%,
-  100% {
-    width: 0;
-  }
-  10% {
-    width: 5.2em;
-  }
-}
-
-@keyframes caret {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
+    left: 0;
   }
 }
 
