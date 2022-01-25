@@ -30,7 +30,6 @@ h3 {
 
 h1 {
   font-size: 8rem;
-  width: 100%;
   text-align: center;
 }
 
@@ -210,7 +209,7 @@ span {
   font-size: 3rem;
   position: relative;
   top: 0rem;
-  animation: slide 9s steps(3) infinite;
+  animation: slide 15s steps(3) infinite;
 }
 
 @keyframes slide {
@@ -236,7 +235,7 @@ span {
   background-color: var(--white);
   border-left: 2px solid var(--purple);
   transition: 2s;
-  animation: typing 3s steps(10) infinite;
+  animation: typing 5s steps(10) infinite;
 }
 
 @keyframes typing {
@@ -325,6 +324,7 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 8rem;
 }
 
 .projectsContainer {
@@ -470,14 +470,32 @@ span {
 }
 
 /*  media queries */
-@media screen and (max-width: 641px) {
+@media screen and (max-width: 736px) {
+  .splashImage {
+    height: fit-content;
+  }
   h1 {
+    font-size: 6rem;
+  }
+
+  .aboutMe .projects .contactMe {
+    position: relative;
+    top: -6rem;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .header h1 {
     font-size: 4rem;
     margin: 8rem;
   }
   .aboutMeContent {
     flex-direction: column;
     align-items: center;
+  }
+
+  .splashImage::after {
+    bottom: 17rem;
   }
   .abilities {
     text-align: center;
@@ -566,5 +584,31 @@ span {
   }
   .burgerMenuHidden {
     display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .subHeading {
+    flex-direction: column;
+    text-align: left;
+    font-size: 2.5rem;
+  }
+  .staticText {
+    left: 1rem;
+    position: relative;
+  }
+
+  .dynamicText li {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .splashImage::after {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .splashImage::after {
+    bottom: 8rem;
   }
 }
