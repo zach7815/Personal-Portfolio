@@ -333,7 +333,14 @@ span {
   gap: 0.5rem;
   width: 100%;
 }
+.lastCard {
+  grid-column-start: 2;
+}
 
+.placeholder {
+  text-align: center;
+  display: flex;
+}
 .cardImage {
   width: 100%;
   height: auto;
