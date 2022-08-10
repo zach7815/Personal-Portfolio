@@ -340,6 +340,13 @@ span {
 .placeholder {
   text-align: center;
   display: flex;
+  border: var(--purple) solid;
+  justify-content: center;
+  align-items: center;
+}
+
+.place2 {
+  grid-row-start: 2;
 }
 .cardImage {
   width: 100%;
