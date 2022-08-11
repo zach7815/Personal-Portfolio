@@ -492,6 +492,11 @@ span {
     font-size: 6rem;
   }
 
+  .projectsContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
   .aboutMe .projects .contactMe {
     position: relative;
     top: -6rem;
